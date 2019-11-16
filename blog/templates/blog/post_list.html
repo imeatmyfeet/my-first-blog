@@ -14,18 +14,12 @@
 	<h3>Había que decirlo y se dijo</h3>
 </div>
 <div>
-		<p>¿Estamos de acuerdo en que Maite es la puta ama? Estamos de acuerdo en que Maite es la puta ama</p>
-		<em>Queda secundado y corroborado, gracias.</em>
-		<br>
-		<br>
-		<strong>¡también votamos a favor de la moción! Ha quedado claro.</strong>
-	<br>
-	<br>
-		<a href="https://twitter.com/eatmyfeet">¡viva eatmyfeet!</a>
-	<ul><li>Si te gusta la piña colonia</li>
-		<li>Has de venir a Babilonia</li>
-		<li>Y ya está. Se acabó.</li>
-	</ul>
+	{% for post in posts %}  
+	<div>
+        <p> publicado: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>{% endfor %}
 </div>
 
 </body>
